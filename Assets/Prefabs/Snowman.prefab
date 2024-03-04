@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8075896629327650607}
   - component: {fileID: 5169150126351339658}
   - component: {fileID: 6942428494509286464}
-  - component: {fileID: 5358401002081911391}
-  - component: {fileID: 1686403876993539963}
-  - component: {fileID: -9109108751861847274}
+  - component: {fileID: 2921390202858188912}
+  - component: {fileID: 1581591270}
+  - component: {fileID: 1581591269}
+  - component: {fileID: 1581591271}
   m_Layer: 0
   m_Name: Snowman
   m_TagString: Untagged
@@ -90,7 +91,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &5358401002081911391
+--- !u!65 &2921390202858188912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8888005179860387221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5138551, y: 0.8468229, z: 0.45033395}
+  m_Center: {x: 0.0052825017, y: 0.42341146, z: 0}
+--- !u!54 &1581591270
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,9 +118,9 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 96
   m_CollisionDetection: 0
---- !u!114 &1686403876993539963
+--- !u!114 &1581591269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,20 +129,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8888005179860387221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bd10feb47f840a42b65c34a2fcff1ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 48ee30d2fefb4cf7808666372b872beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 2
---- !u!65 &-9109108751861847274
-BoxCollider:
+  _forceValue: 250
+--- !u!114 &1581591271
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8888005179860387221}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6934599, y: 0.838108, z: 0.45033395}
-  m_Center: {x: 0, y: 0.419054, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57fcb0e4636248f096a07c1f0b845502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 6942428494509286464}
