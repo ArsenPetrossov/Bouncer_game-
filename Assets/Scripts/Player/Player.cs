@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using UnityEngine;
 
@@ -8,8 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Color Color { get; private set; }
-    [SerializeField]
-    private Renderer _renderer;
+    [SerializeField] private Renderer _renderer;
     private Material _material;
 
     private void Awake()

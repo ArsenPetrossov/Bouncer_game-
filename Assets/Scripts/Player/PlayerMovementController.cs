@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Класс, отвечающий за передвижение кубика.
@@ -6,13 +7,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovementController : MonoBehaviour
 {
-    [SerializeField] 
-    private float _forceValue = 250;
-    
+    public UnityEvent<int> PlayerMoved;
+    [SerializeField] private float _forceValue = 250;
+
     private Rigidbody _rigidbody;
-    private Vector3 _startPosition = Vector3.zero;
     private Vector3 _target;
     private Camera _camera;
+    private int _movementCount;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             // Зануляем скорость
             _rigidbody.velocity = Vector3.zero;
-            
+
             // Двигаем кубик к заданной точке
             MoveTowardsSelectedPoint(hitInfo);
         }
@@ -47,5 +48,7 @@ public class PlayerMovementController : MonoBehaviour
 
         // Придаем игроку силу в указанном направлении
         _rigidbody.AddForce(new Vector3(direction.x, 0, direction.z) * _forceValue);
+
+        PlayerMoved?.Invoke(++_movementCount);
     }
 }
