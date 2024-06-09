@@ -11,9 +11,14 @@ Snowman: at the start of the game is in the center of the platform. Movable, phy
 
 Camera: "Looks" from top to bottom on the playing field, stationary.
 
-Translated with DeepL.com (free version)
-
 
 
 https://github.com/ArsenPetrossov/Bouncer_game-/assets/157959288/43938423-f954-46be-9abf-b0c566bfb46f
+
+
+add UI 
+
+
+
+https://github.com/ArsenPetrossov/Bouncer_game-/assets/157959288/6bbd3878-c6e2-4343-9ae8-89fe3450679c
 
